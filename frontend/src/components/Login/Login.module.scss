@@ -1,0 +1,103 @@
+$inputColor: #ffffffde;
+$inputTextColor: #000000;
+$placeholderColor: #000000a8;
+
+$loginModalColor: #010101;
+$loginModalGradient: linear-gradient(to right, #000000, #203735);
+
+$buttonTextColor: #c3c3c3;
+$buttonTextColorHover: #ffffff;
+
+
+$buttonColor: #000000be;
+$buttonHoverColor: #141414;
+
+$inputGap: 8px;
+
+
+.loginBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(75, 75, 75, 0.299);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loginContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        background-color: $loginModalColor;
+        background-image: $loginModalGradient;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+        .form{
+            height: 100%;
+            width: 89%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+
+            .fieldContainer{
+                width: 100%;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: $inputGap;
+
+
+                .inputField{
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid rgba(0, 0, 0, 0.481);
+                    padding: 5px;
+                    background-color: $inputColor;
+                    color: $inputTextColor;
+
+                }
+
+                .inputField::placeholder {
+                    color: $placeholderColor;
+                }
+
+            }
+
+            .submitButtonContainer{
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                padding: 20px 0px;
+
+
+
+                .submitButton{
+
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: $buttonColor;
+                    color: $buttonTextColor;
+                    font-weight: 400;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: $buttonHoverColor;
+                        color: $buttonTextColorHover;
+                    }
+
+
+                }
+            }
+        }
+    }
+}

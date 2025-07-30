@@ -1,0 +1,234 @@
+$photoContainerColor: rgb(0, 0, 0);
+
+$userImageRadius: 75px;
+
+$userNameColor: white;
+
+$photoTitleColor: rgba(235,235,235,1);
+$photoTitleBackgroundColor: rgba(42, 42, 42, 0.5);
+
+$titlePadding: 35px;
+$userInfoPadding: 10px;
+$userInfoBackgroundColor: rgb(0, 0, 0);
+
+$photoContentColor: rgba(235,235,235,0.9);
+
+$extraInfoColor: rgba(235, 235, 235, 0.674);
+
+$submitButtonColor: #000000;
+$submitButtonTextColor: rgb(150, 150, 150);
+$submitButtonHoverColor: #1f1f1f;
+$submitButtonHoverTextColor: rgb(206, 206, 206);
+
+$commentFormBackgroundColor: rgb(0, 0, 0);
+.container{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-color: blue;
+
+
+    .innerContainer{
+        background-color: orange;
+        width: 75%;
+        height: 100%;
+        display: flex;
+
+        .leftSubContainer{
+            width: 70%;
+            background-color: $photoContainerColor;
+            height: 100%;
+            overflow-y: scroll;
+
+            .titleContainer{
+                background-color: $photoTitleBackgroundColor;
+                padding: 10px 0;
+
+                .photoTitle {
+                    font-size: 1.7rem;
+                    font-weight: 600;
+                    color: $photoTitleColor;
+                    margin-top: 20px;
+                    margin-left: 15px;
+
+                    padding: $titlePadding;
+                }
+
+            }
+
+            .photoContainer{
+                background-color: purple;
+
+                width: 100%;
+                overflow: hidden;
+        
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+        
+                    cursor: pointer;
+                }
+
+            }
+
+            .contentContainer{
+                background-color: black;
+                padding-bottom: 20px;
+                padding-top: 5px;
+
+                p {
+                    background-color: $photoTitleBackgroundColor;
+                    font-size: 0.9rem;
+                    color: $photoContentColor;
+                    padding: 10px;
+                }
+
+            }
+
+        }
+        .rightSubContainer{
+            width: 30%;
+            height: 100%;
+            background-color: green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .userInfoContainer{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: $userInfoPadding 0px;
+                width: 100%;
+
+                height: 20%;
+        
+                cursor: pointer;
+
+                background-color: $userInfoBackgroundColor;
+                border-bottom: 2px solid rgb(40, 40, 40);
+        
+        
+                .userPictureContainer{
+        
+                    height: $userImageRadius;
+                    width: $userImageRadius;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-left: 10px;
+        
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+        
+        
+                }
+        
+                #username {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: $userNameColor;
+        
+                }
+
+            }
+
+            .commentsContainer{
+                background-color: black;
+                width: 100%;
+
+                height: 55%;
+
+                .commentsSection{
+                    height: 85%;
+                    overflow-y: scroll;
+
+                    .commentContainer{
+                        width: 100%;
+
+                        border: 1px solid rgb(40, 40, 40);
+                    }
+                }
+
+                .commentForm{
+                    
+                    background-color: $commentFormBackgroundColor;
+                    display: flex;
+                    width: 100%;
+                    height: 15%;
+
+                    .inputFieldBig{
+                        width: 95%;
+                        border-radius: 1px;
+                        background-color: rgba(32,32,32,0.3);
+                        border : 2px solid rgba(159, 159, 159, 0.3);
+                        font-size: smaller;
+                        padding: 1px;
+                        
+                        color: white;
+                    }
+
+                    .submitButton{
+                        background-color: $submitButtonColor;
+                        color: $submitButtonTextColor; 
+                        font-size: 13px;
+                        font-weight: 400;
+                        min-width: 40px;
+                        text-align: center;
+                        font-family: 'Roboto', sans-serif; 
+                        border : 2px solid rgba(159, 159, 159, 0.3);
+                    
+                        &:hover {
+                            background-color: $submitButtonHoverColor;
+                            color: $submitButtonHoverTextColor;
+                        }
+    
+    
+                    }
+
+                }
+
+            }
+
+            .ratingsContainer{
+
+                background-color: $userInfoBackgroundColor;
+                padding: $userInfoPadding 0px;
+                width: 100%;
+
+                height: 15%;
+
+                border-top: 1px solid rgb(40, 40, 40);
+                border-bottom: 1px solid rgb(40, 40, 40);
+
+
+            }
+
+            .extraInfoContainer{
+
+                background-color: $userInfoBackgroundColor;
+                width: 100%;
+                height: 10%;
+                text-align: end;
+                
+                p {
+                    color: $extraInfoColor;
+                    font-size: 0.7rem;
+                    padding-top: 10px;
+                    padding-right: 10px;
+                    font-weight: 500;
+                }
+
+            }
+
+        }
+    }
+
+}

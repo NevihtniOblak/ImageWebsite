@@ -1,0 +1,138 @@
+
+$modalBackgroundColor: rgb(20, 20, 20);
+
+
+$submitButtonColor: #c7c7c7;
+$submitButtonTextColor: rgb(54, 54, 54);
+$submitButtonHoverColor: #0ae2e2;
+$submitButtonHoverTextColor: rgb(54, 54, 54);
+
+.addPhotoBackground{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(221, 221, 221, 0.185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+
+    .container{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 85%;
+        background-color: $modalBackgroundColor;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(75, 75, 75, 0.75);
+        border: 2px solid rgba(185, 185, 185, 0.3);
+
+        .formContainer{
+            height: 100%;	
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .titleContainer{
+                width: 100%;
+                background-color: rgba(32,32,32,0.3);
+                display: flex;
+                justify-content: center;
+                flex: 2;
+
+                .inputField{
+                    width: 95%;
+                    margin: 10px 0;
+                    height: 50px;
+                    border-radius: 9px;
+                    background-color: rgba(32,32,32,0.3);
+                    border : 2px solid rgba(159, 159, 159, 0.3);
+                    
+                    color: white;
+
+                }
+            }
+
+            .imagePreviewContainer{
+                flex: 8;
+                border-radius: 10px;
+                width: 95%;
+                border: 5px dashed rgba(159, 159, 159, 0.3);
+                cursor: pointer;
+                
+                overflow: hidden;
+        
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+        
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .descriptionContainer{
+                flex: 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .inputField{
+                    width: 95%;
+                    margin: 10px 0;
+                    height: 100px;
+                    border-radius: 3px;
+                    background-color: rgba(32,32,32,0.3);
+                    border : 2px solid rgba(159, 159, 159, 0.3);
+                    font-size: smaller;
+                    
+                    color: white;
+
+                }
+
+
+            }
+
+            .submitButtonContainer{
+                flex: 1;
+                width: 100%;
+                display: flex;
+                justify-content: end;
+
+                .submitButton{
+                    margin: 5px 10px;
+                    width: 100px;
+                    border-radius: 11px;
+                    background-color: $submitButtonColor;
+                    color: $submitButtonTextColor; 
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif; 
+                    border : 2px solid rgba(159, 159, 159, 0.3);
+                
+                    &:hover {
+                        background-color: $submitButtonHoverColor;
+                        color: $submitButtonHoverTextColor;
+                    }
+
+
+                }
+
+
+            }
+
+        }         
+    }
+
+
+}

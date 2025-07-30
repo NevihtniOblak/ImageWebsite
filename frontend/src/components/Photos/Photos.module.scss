@@ -1,0 +1,78 @@
+
+$rightBlockColor : black;
+$rightBorderColor: #2c2c2c;
+
+$uploadButtonColor: rgba(34, 34, 34, 1);
+$uploadButtonTextColor: rgba(244, 244, 244, 0.9);
+
+$photoContainerColor: black;
+$leftBlockColor: black;
+
+$slideBarColor: black;
+
+$borderColor: #2c2c2c;
+
+
+.container{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+
+    .leftSubContainer{
+        background-color: $leftBlockColor;
+        height: 100%; 
+        width: 50%;
+        margin: auto;       
+
+        .menuContainer{
+            background-color: $slideBarColor;
+            display: flex;
+            gap: 15px;
+            border-bottom: $borderColor 1px solid;
+            margin-bottom: 30px;
+            width: 100%;
+
+        }
+
+        .photosContainer{
+            background-color: $photoContainerColor;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+        }
+    
+    }
+
+    .rightSubContainer{
+        background-color: $rightBlockColor;
+        border: $rightBorderColor 1px solid;
+        width: 25%;
+        height: 100%;
+        position: fixed;
+
+        .uploadButtonContainer{
+            background-color: $uploadButtonColor;
+            color: $uploadButtonTextColor;
+            border-radius: 8px;
+            gap: 10px;
+            height: 40px;
+            margin-left: 10px;
+            margin-right: 5px;
+            margin-top: 5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+        }
+    }
+}

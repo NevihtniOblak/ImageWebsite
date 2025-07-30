@@ -1,0 +1,68 @@
+
+$titlePadding: 35px;
+$userInfoPadding: 10px;
+$userInfoBackgroundColor: rgb(0, 0, 0);
+$userNameColor: white;
+
+$userImageRadius: 30px;
+
+$commentsTextColor: rgb(238, 238, 238);
+
+.container{
+    width: 100%;
+
+    .userInfoContainer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: $userInfoPadding 0px;
+        width: 100%;
+
+        cursor: pointer;
+
+        background-color: $userInfoBackgroundColor;
+
+
+        .userPictureContainer{
+
+            height: $userImageRadius;
+            width: $userImageRadius;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 10px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+
+        }
+
+        #username {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $userNameColor;
+
+        }
+
+    }
+
+    .contentContainer{
+        width: 100%;
+        overflow-wrap: break-word;
+
+
+        p {
+            margin-left: 8px;
+            margin-right: 4px;
+            font-size: 12px;
+            color: $commentsTextColor;
+            font-weight: 400;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+    }
+}

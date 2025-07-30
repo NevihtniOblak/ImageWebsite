@@ -1,0 +1,46 @@
+
+$menuColor: black;
+$menuItemColor: black;
+$menuItemHoverColor: rgba(22, 22, 22, 0.9);
+
+$menuItemTextColor: white;
+
+$slideLineColor: #07e7ff;
+
+.menu {
+    display: flex;
+    position: relative;
+    justify-content: space-around;  
+    background-color: $menuColor;
+    
+    .menu-item {
+    padding: 10px 20px;
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    background-color: $menuItemColor;
+    color: $menuItemTextColor;
+    position: relative;
+    }
+
+    .menu-item:hover {
+        background-color: $menuItemHoverColor;
+    }
+
+    .active {
+        }
+          
+    
+    .line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background-color: $slideLineColor;
+        transition: left 0.3s ease, width 0.3s ease;
+        }
+
+  }
+  
+
+  

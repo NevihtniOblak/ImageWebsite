@@ -1,0 +1,89 @@
+$imageRadius: 100px;
+
+$elementPadding: 35px;
+$elementMargin: 35px;
+
+$elemenRightMargin: 10px;
+
+$mainColor : black;
+
+$statsBackgroundColor: #f1f1f1;
+$statsColor: #333;
+$picAndNameBackgroundColor: #141414;
+$userNameColor: #e6e6e6;
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: $mainColor;
+
+    .profileContainer{
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        .pictureContainer{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: $elementPadding;
+            border-radius: 20px;
+            margin-top: $elementMargin;
+            margin-left: $elementMargin;
+            margin-right: $elemenRightMargin;
+            background-color: $picAndNameBackgroundColor;
+            
+            .userImageContainer{
+
+                height: $imageRadius;
+                width: $imageRadius;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-left: 10px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            span {
+                font-size: 2.7rem;
+                font-weight: 600;
+                color: $userNameColor;
+            }
+        }
+
+
+        .statsContainer{
+            display: flex;
+            flex-direction: column;
+            margin-left: $elementMargin;
+            margin-right: $elemenRightMargin;
+            gap: 7px;
+
+            font-size: 16px;
+            color: $statsColor;
+            padding: 15px $elementPadding; 
+            line-height: 1.5; 
+            font-weight: 500; 
+            background-color: $statsBackgroundColor; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        
+        }
+
+   
+        .formContainer{
+
+        }
+
+    }
+    
+}

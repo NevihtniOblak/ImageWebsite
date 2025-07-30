@@ -1,0 +1,86 @@
+$changePictureModalColor: #010101;
+$changePictureModalGradient: linear-gradient(to top, #000000, #363f3f);
+
+$imagePreviewRadius: 200px;
+
+$submitButtonColor: #c8c8c8;
+$submitButtonTextColor: rgb(54, 54, 54);
+$submitButtonHoverColor: #2cbcbc;
+$submitButtonHoverTextColor: rgb(54, 54, 54);
+
+$formColor: rgba(0, 0, 0, 0.132);
+
+.ChangePictureBackground {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(75, 75, 75, 0.299);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+    
+        .ChangePictureContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+            width: 35%;
+            background-color: $changePictureModalColor;
+            background-image: $changePictureModalGradient;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+            .formContainer{
+                height: 100%;
+                background-color: $formColor;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+
+                .imagePreviewContainer {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    width: $imagePreviewRadius;
+                    height: $imagePreviewRadius; 
+                    overflow: hidden;
+                    border: 1px solid black;
+
+                    .imagePreview {
+    
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+
+                    }
+                }
+
+                .submitButton {
+                    width: 100%;
+                    border-radius: 11px;
+                    background-color: $submitButtonColor;
+                    color: $submitButtonTextColor; 
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif; 
+                
+                    &:hover {
+                        background-color: $submitButtonHoverColor;
+                        color: $submitButtonHoverTextColor;
+                    }
+                }
+            }
+
+        }
+}
